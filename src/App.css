@@ -1,0 +1,90 @@
+/* App.css */
+
+/* Center content horizontally and vertically */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px; /* Add padding for better spacing on smaller screens */
+  box-sizing: border-box;
+}
+
+/* Styles for the table container */
+.table-container {
+  display: flex; /* Display tables inline using Flexbox */
+  justify-content: center;
+  overflow-x: auto;
+  margin-top: 20px;
+  width: 100%;
+}
+.selected-row {
+  background-color: rgba(0, 0, 0, 0.1); /* Use any color you prefer */
+}
+/* Styles for each table */
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: auto;
+  margin: 0 5%; /* Adjust margins */
+  max-width: 90%; /* Adjust maximum width */
+  font-size: 20px; /* Use responsive font size units */
+  
+}
+  td:nth-child(2),
+  td:nth-child(3),
+  td:nth-child(4),
+  td:nth-child(5),
+  td:nth-child(6) {
+    text-align: center; /* Center the text in these columns */
+  }
+th, td {
+  border: 1px solid #ddd;
+  padding: 4px; /* Adjust padding */
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Styles for the new button column */
+.button-column {
+  width: 40px; /* Adjust button column width */
+  text-align: center;
+}
+
+/* Style for the first column */
+.first-column {
+  width: 50%;
+}
+
+/* Media queries for responsive layout */
+@media (max-width: 900px) {
+  .table-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  table {
+    margin: 10px 0;
+    font-size: 0.9rem; /* Adjust font size for phones */
+  }
+
+  /* Adjust column widths for smaller screens */
+  td:nth-child(2),
+  td:nth-child(3),
+  td:nth-child(4),
+  td:nth-child(5),
+  td:nth-child(6) {
+    max-width: 20%; /* You can adjust this value as needed */
+    text-align: center; /* Center the text in these columns */
+  }
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 10px; /* Add space between buttons */
+}
